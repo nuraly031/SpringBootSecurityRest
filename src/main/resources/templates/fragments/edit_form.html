@@ -1,0 +1,56 @@
+<div th:fragment="edit_form" class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Edit user</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <form class="form-user-edit" id="edit_form">
+        <div class="modal-body">
+            <div class="container col-6 text-center">
+                <div class="form-group text-center">
+                    <div>
+                        <label for="edit_id"><strong>ID</strong></label>
+                        <input class="form-control e_id" id="edit_id" readonly="readonly"/>
+                    </div>
+                    <div>
+                        <label for="edit_firstName" class="form-label"><strong>First name</strong></label>
+                        <input class="form-control e_firstName" id="edit_firstName" type="text"
+                               placeholder="Enter first name"/>
+                        <div class="messageEdituserName"></div>
+                    </div>
+                    <div>
+                        <label for="edit_lastName" class="form-label"><strong>Last name</strong></label>
+                        <input class="form-control e_lastName" id="edit_lastName" type="text"
+                               placeholder="Enter last name" required/>
+                        <div class="messageEdituserLastname"></div>
+                    </div>
+                    <div>
+                        <label for="edit_age" class="form-label"><strong>Age</strong></label>
+                        <input class="form-control e_age" id="edit_age" type="number" placeholder="Enter age" required/>
+                        <div class="messageEdituserAge"></div>
+                    </div>
+                    <div>
+                        <label for="edit_email" class="form-label"><strong>Email</strong></label>
+                        <input class="form-control e_email" id="edit_email" type="email" placeholder="Enter email"/>
+                        <div class="messageEdituserMail"></div>
+                    </div>
+                    <div>
+                        <label for="edit_password" class="form-label"><strong>Password</strong></label>
+                        <input class="form-control e_password" id="edit_password" type="password"
+                               placeholder="Enter password" required/>
+                    </div>
+                    <div class="pb-3">
+                        <label for="edit_userroles"><strong>Role</strong></label>
+                        <select multiple class="form-control text-center e_userroles" id="edit_userroles" size="2">
+                            <option value="ROLE_ADMIN">ADMIN</option>
+                            <option value="ROLE_USER">USER</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary submit">Save</button>
+        </div>
+    </form>
+</div>
